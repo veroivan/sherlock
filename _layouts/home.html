@@ -3,7 +3,7 @@ layout: default
 ---
 <style>
     body {
-        background: url('../images/blank_page2.jpg');
+        background: url('../resources/images/blank_page2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -67,8 +67,8 @@ layout: default
   {% else %}
 
     <ul class="post-list">
-      {% for case in site.cases %}
-        {% include case-list-item.html %}
+      {% for post in site.cases %}
+        {% include post-list-item.html %}
       {% endfor %}
     </ul>
   

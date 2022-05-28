@@ -2,16 +2,47 @@
 layout: default
 ---
 <style>
-    body {
-        background: url('../images/blank_page.jpg')
+    @font-face {
+        font-family: 'DeadSecretary';
+        src: url('../resources/fonts/Dead\ Secretary.ttf');
     }
-    h1 {
+    @font-face {
+        font-family: 'Fell';
+        src: url('../resources/fonts/IM\ Fell\ English\ Roman\ Caps\ FeENsc2.ttf');
+    }
+    @font-face {
+        font-family: 'Phyllis';
+        src: url('../resources/fonts/Phyllis\ ATT\ Italic.ttf');
+    }
+    body {
+        background: url('../resources/images/blank_page.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .case {
         text-align: center;
+    }
+    .case-title {
+        font-family: 'DeadSecretary';
+    }
+    .case-date {
+        font-family: 'Fell';
+    }
+    .case-author {
+        font-family: 'Fell';
+        font-size: small;
+    }
+    .case-intro {
+        font-family: 'Phyllis';
+        padding: 5%;
+        text-align: justify;
     }
 </style>
 <div class="case">
-    <h1>{{page.title}}</h1>
-    <h2>{{page.date}}</h2>
-    <h3>{{page.author}}</h3>
-    <p>{{content}}</p>    
+    <h1 class="case-title">{{page.title}}</h1>
+    <h2 class="case-date">{{page.case_date}}</h2>
+    <h6 class="case-author">{{page.author}}</h6>
+    <div class="divided"></div>
+    <br>
+    <article class="case-intro">{{content}}</article>    
 </div>

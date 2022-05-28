@@ -31,10 +31,12 @@ github_username:  jekyll
 theme: hitchens-theme
 plugins:
   - jekyll-feed
+hide_search: true
 
 collections:
   cases:
     output: true
+    
 
 
 # Exclude from processing.
