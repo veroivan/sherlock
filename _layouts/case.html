@@ -37,6 +37,11 @@ layout: default
         padding: 5%;
         text-align: justify;
     }
+    .actions {
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'Fell';
+    }
 </style>
 <div class="case">
     <h1 class="case-title">{{page.title}}</h1>
@@ -44,5 +49,12 @@ layout: default
     <h6 class="case-author">{{page.author}}</h6>
     <div class="divided"></div>
     <br>
-    <article class="case-intro">{{content}}</article>    
+    <article class="case-intro">{{content}}</article>  
+    <div class="actions">
+        <a class="action-link" target="_blank" href="../resources/images/london_map.jpg">
+            London Map
+        </a>
+        <a class="action-link">London Directory</a>
+        <a class="action-link">Solve!</a>
+    </div>
 </div>
