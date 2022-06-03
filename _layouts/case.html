@@ -13,13 +13,13 @@ layout: default
     @font-face {
         font-family: 'Phyllis';
         src: url('/assets/fonts/Phyllis\ ATT\ Italic.ttf');
-    }.search-button {
-        background: url('/assets/images/lens.png') no-repeat;
-        background-color: transparent;
-        border: none;
-        padding: 12px 16px;
-        font-size: 16px;
-        cursor: pointer;
+    }
+    .header {
+        padding: 10px 16px;
+        background: transparent;
+        color: #f1f1f1; 
+        top: 0;
+        width: 100%;
     }
 </style>
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
@@ -30,6 +30,11 @@ layout: default
         window.location = `/cases/{{ page.case_name }}/${input}.html`
     }
 </script>
+<div class="header">
+    <a href="/" class="home-link">
+        <i class="fa fa-house"></i>
+    </a>
+</div> 
 <div class="case">
     <h1 class="case-title">{{page.title}}</h1>
     <h2 class="case-date">{{page.case_date}}</h2>
