@@ -36,7 +36,7 @@ hide_search: true
 collections:
   cases:
     output: true
-    
+    permalink: /:collection/:name
 
 
 # Exclude from processing.

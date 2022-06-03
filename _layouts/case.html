@@ -13,9 +13,23 @@ layout: default
     @font-face {
         font-family: 'Phyllis';
         src: url('/assets/fonts/Phyllis\ ATT\ Italic.ttf');
+    }.search-button {
+        background: url('/assets/images/lens.png') no-repeat;
+        background-color: transparent;
+        border: none;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
     }
 </style>
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<script>
+    function goTo() {
+        const input = document.getElementById("lead_input").value
+        window.location = `/cases/{{ page.case_name }}/${input}.html`
+    }
+</script>
 <div class="case">
     <h1 class="case-title">{{page.title}}</h1>
     <h2 class="case-date">{{page.case_date}}</h2>
@@ -23,8 +37,16 @@ layout: default
     <div class="divided"></div>
     <br>
     <article class="case-intro">{{content}}</article>  
+    <div class="lead-search">
+        <label>Go to...</label>
+        <input type="text" id="lead_input" class="searchbox" placeholder="Address..." autocomplete="off">
+        <button type="button" class="search-button" onclick="goTo()">
+            <i class="fa fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <br>
     <div class="actions">
-        <a class="action-link" target="_blank" href="../assets/images/london_map.jpg">
+        <a class="action-link" target="_blank" href="/assets/images/london_map.jpg">
             London Map
         </a>
         <a class="action-link">London Directory</a>

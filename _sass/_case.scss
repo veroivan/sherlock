@@ -27,3 +27,24 @@ body {
     justify-content: space-evenly;
     font-family: 'Fell';
 }
+.lead-search {
+    font-family: 'Fell';
+}
+.searchbox {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+.searchbox:focus {
+    border: 2px solid black;
+}
+.search-button {
+    background-color: transparent;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
