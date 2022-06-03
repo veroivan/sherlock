@@ -3,11 +3,24 @@ layout: default
 ---
 <style>
     body {
-        background: url('../resources/images/blank_page2.jpg');
+        background: url('/assets/images/blank_page2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
+    @font-face {
+        font-family: 'DeadSecretary';
+        src: url('/assets/fonts/Dead\ Secretary.ttf');
+    }
+    @font-face {
+        font-family: 'Fell';
+        src: url('/assets/fonts/IM\ Fell\ English\ Roman\ Caps\ FeENsc2.ttf');
+    }
+    @font-face {
+        font-family: 'Phyllis';
+        src: url('/assets/fonts/Phyllis\ ATT\ Italic.ttf');
+    }
 </style>
+<link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
 {% if site.data.menu and site.paginate and site.paginate_path and paginator.page > 1 %}
   {% include menu.html %}
 {% elsif site.paginate and site.paginate_path and paginator.page > 1 %}

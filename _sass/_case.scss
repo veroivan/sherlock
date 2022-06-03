@@ -1,0 +1,29 @@
+
+body {
+    background: url('/assets/images/blank_page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.case {
+    text-align: center;
+}
+.case-title {
+    font-family: 'DeadSecretary';
+}
+.case-date {
+    font-family: 'Fell';
+}
+.case-author {
+    font-family: 'Fell';
+    font-size: small;
+}
+.case-intro {
+    font-family: 'Phyllis';
+    padding: 5%;
+    text-align: justify;
+}
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Fell';
+}
