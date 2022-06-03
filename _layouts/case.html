@@ -14,13 +14,6 @@ layout: default
         font-family: 'Phyllis';
         src: url('/assets/fonts/Phyllis\ ATT\ Italic.ttf');
     }
-    .header {
-        padding: 10px 16px;
-        background: transparent;
-        color: #f1f1f1; 
-        top: 0;
-        width: 100%;
-    }
 </style>
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -41,20 +34,22 @@ layout: default
     <h6 class="case-author">{{page.author}}</h6>
     <div class="divided"></div>
     <br>
-    <article class="case-intro">{{content}}</article>  
-    <div class="lead-search">
-        <label>Go to...</label>
-        <input type="text" id="lead_input" class="searchbox" placeholder="Address..." autocomplete="off">
-        <button type="button" class="search-button" onclick="goTo()">
-            <i class="fa fa-magnifying-glass"></i>
-        </button>
-    </div>
-    <br>
-    <div class="actions">
-        <a class="action-link" target="_blank" href="/assets/images/london_map.jpg">
-            London Map
-        </a>
-        <a class="action-link">London Directory</a>
-        <a class="action-link">Solve!</a>
-    </div>
+    <article class="case-intro">{{content}}</article> 
+    {% unless page.type == "solution" %} 
+        <div class="lead-search">
+            <label>Go to...</label>
+            <input type="text" id="lead_input" class="searchbox" placeholder="Address..." autocomplete="off">
+            <button type="button" class="search-button" onclick="goTo()">
+                <i class="fa fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <br>
+        <div class="actions">
+            <a class="action-link" target="_blank" href="/assets/images/london_map.jpg">
+                London Map
+            </a>
+            <a class="action-link">London Directory</a>
+            <a class="action-link" href="questions">Solve!</a>
+        </div>
+    {% endunless %}
 </div>

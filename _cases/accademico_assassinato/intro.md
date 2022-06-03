@@ -5,7 +5,7 @@ case_date: 18 Marzo 1886
 author: (DI THANE MULLEN, DOMITILLA D'AMICO & MARCO INFUSSI)
 case_name: accademico_assassinato
 language: it
-address: intro
+type: intro
 ---
 
 Le prime settimane del marzo 1886 furono per me e Sherlock Holmes un periodo terribilmente noioso. Gli intrighi del passato lasciavano il posto ad un tedio floscio, e vedevo Holmes scalciare dall'insofferenza tanto che – in mancanza di stimoli intellettuali – finiva per dilapidare le sue giornate per taverne e fumerie. Ma il 18 Marzo avrei preferito di buon grado la noia, anzichè ricevere quella notizia.

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<style>
+    @font-face {
+        font-family: 'DeadSecretary';
+        src: url('/assets/fonts/Dead\ Secretary.ttf');
+    }
+    @font-face {
+        font-family: 'Fell';
+        src: url('/assets/fonts/IM\ Fell\ English\ Roman\ Caps\ FeENsc2.ttf');
+    }
+    @font-face {
+        font-family: 'Phyllis';
+        src: url('/assets/fonts/Phyllis\ ATT\ Italic.ttf');
+    }
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<div class="question-page">
+    <div class="header">
+        <a href="/" class="home-link">
+            <i class="fa fa-house"></i>
+        </a>
+    </div> 
+    <div class="questions">
+        <h1 class="case-title">{{page.title}}</h1>
+        <div class="divided"></div>
+        <br>
+        <h2 class="question-series">First series</h2>
+        <ol class="question-list">
+            {% for question in page.questions.first_series %}
+               <li>{{ question }}</li>
+            {% endfor %}
+        </ol>
+        <div class="divided"></div>
+        <h2 class="question-series">Second series</h2>
+        <ol class="question-list">
+            {% for question in page.questions.second_series %}
+               <li>{{ question }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    <br>
+    <div class="actions">
+        {% if page.type == "questions" %}
+            <a class="action-link" href="answers">Answers</a>
+        {% elsif page.type == "answers" %}
+            <a class="action-link" href="questions">Questions</a>
+        {% endif %}
+        <a class="action-link" href="solution">Solution</a>
+    </div>
+    <br>
+</div>
