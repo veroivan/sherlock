@@ -4,15 +4,15 @@ layout: default
 <style>
     @font-face {
         font-family: 'DeadSecretary';
-        src: url('/assets/fonts/Dead\ Secretary.ttf');
+        src: url('{{ site.baseurl }}/assets/fonts/Dead\ Secretary.ttf');
     }
     @font-face {
         font-family: 'Fell';
-        src: url('/assets/fonts/IM\ Fell\ English\ Roman\ Caps\ FeENsc2.ttf');
+        src: url('{{ site.baseurl }}/assets/fonts/IM\ Fell\ English\ Roman\ Caps\ FeENsc2.ttf');
     }
     @font-face {
         font-family: 'Phyllis';
-        src: url('/assets/fonts/Phyllis\ ATT\ Italic.ttf');
+        src: url('{{ site.baseurl }}/assets/fonts/Phyllis\ ATT\ Italic.ttf');
     }
 </style>
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | absolute_url }}">
@@ -20,11 +20,11 @@ layout: default
 <script>
     function goTo() {
         const input = document.getElementById("lead_input").value
-        window.location = `/cases/{{ page.case_name }}/${input}.html`
+        window.location = `{{ site.baseurl }}/cases/{{ page.case_name }}/${input}.html`
     }
 </script>
 <div class="header">
-    <a href="/" class="home-link">
+    <a href="{{site.baseurl}}/" class="home-link">
         <i class="fa fa-house"></i>
     </a>
 </div> 
@@ -35,6 +35,16 @@ layout: default
     <div class="divided"></div>
     <br>
     <article class="case-intro">{{content}}</article> 
+    {% capture asset_path %}
+        /assets/images/{{page.case_name}}/{{page.address}}.jpg
+    {% endcapture %}
+    {% for static_file in site.static_files %}
+        {% assign file_exists = site.static_files | where: "path", asset_path  %}
+        {% if file_exists.size != 0 %}
+            <div>Eccomi qua</div>
+            <img src="/assets/images/{{page.case_name}}/{{page.address}}.jpg" width="50%">
+        {% endif %}
+    {% endfor %}
     {% unless page.type == "solution" %} 
         <div class="lead-search">
             <label>Go to...</label>
@@ -45,14 +55,15 @@ layout: default
         </div>
         <br>
         <div class="actions">
-            <a class="action-link" target="_blank" href="/assets/images/{{page.case_name}}/newspaper.jpg">
+            <a class="action-link" target="_blank" href="{{ site.baseurl }}/assets/images/{{page.case_name}}/newspaper.jpg">
                 Newspaper
             </a>
-            <a class="action-link" target="_blank" href="/assets/images/london_map.jpg">
+            <a class="action-link" target="_blank" href="{{ site.baseurl }}/assets/images/london_map.jpg">
                 London Map
             </a>
             <a class="action-link">London Directory</a>
             <a class="action-link" href="questions">Solve!</a>
         </div>
+        <br>
     {% endunless %}
 </div>
