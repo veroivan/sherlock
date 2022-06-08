@@ -19,7 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Sherlock Holmes
-
+description: >- # this means to ignore newlines until "baseurl:"
+  Pick the case you wish to play
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: hitchens-theme
@@ -32,7 +35,6 @@ hide_credits: true
 collections:
   cases:
     output: true
-    permalink: /:collection/:name
 
 
 # Exclude from processing.
