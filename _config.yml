@@ -22,8 +22,7 @@ title: Sherlock Holmes
 description: >- # this means to ignore newlines until "baseurl:"
   Pick the case you wish to play
 baseurl: "" # the subpath of your site, e.g. /blog
-domain: sherlock.github.io
-url: https://sherlock.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://veroivan.github.io/sherlock" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # theme: hitchens-theme
