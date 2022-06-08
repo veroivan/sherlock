@@ -26,7 +26,8 @@ domain: sherlock.github.io
 url: https://sherlock.github.io # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: hitchens-theme
+# theme: hitchens-theme
+remote_theme: patdryburgh/hitchens@0.8.0
 plugins:
   - jekyll-feed
 hide_search: true
