@@ -35,16 +35,6 @@ layout: default
     <div class="divided"></div>
     <br>
     <article class="case-intro">{{content}}</article> 
-    {% capture asset_path %}
-        /assets/images/{{page.case_name}}/{{page.address}}.jpg
-    {% endcapture %}
-    {% for static_file in site.static_files %}
-        {% assign file_exists = site.static_files | where: "path", asset_path  %}
-        {% if file_exists.size != 0 %}
-            <div>Eccomi qua</div>
-            <img src="/assets/images/{{page.case_name}}/{{page.address}}.jpg" width="50%">
-        {% endif %}
-    {% endfor %}
     {% unless page.type == "solution" %} 
         <div class="lead-search">
             <label>Go to...</label>
