@@ -3,6 +3,8 @@
 Goal of this project is to provide an easy way to play [Sherlock Holmes Consultant Detective](https://boardgamegeek.com/boardgame/2511/sherlock-holmes-consulting-detective-thames-murder) fan cases.
 It's done with Jekyll, so it's just a pretty bare bones static sites, it doesn't provide any advanced features like leads tracking, there's still a lot of room for improvement.
 
+Here's the link to the published site: https://veroivan.github.io/sherlock/
+
 ## How to create new cases
 Creating a new case is easy but, as of now, requires a bit of manual work. Look at `accademico_assassinato` to see a working example.
 Under `_cases` folder create a new folder named after the case, and under that create a markdown file for each valid address, with this naming convention: `ADDRESS.md` (e.g. `21SE.md`).
@@ -45,7 +47,10 @@ Besides addresses you need to create 4 other files:
     Same format as questions
 - `solution.md`:
     Case solution text, similar to every other lead text, but with `type: solution`
-
+    
+## Development and deploy
+New features must be done on feature branches, then merged to `master`. 
+Deploy is triggered when a branch is merged on `gh-pages`. DO NOT merge branches other than `master` on `gh-pages`
 
 ## TODO list
 - Add London Directory (yes, this is pretty important)
